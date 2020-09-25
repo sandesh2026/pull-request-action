@@ -125,7 +125,10 @@ main () {
             # Pull request body (optional)
             if [ -z "${PULL_REQUEST_BODY}" ]; then
                 echo "No pull request body is set, will use default."
-                PULL_REQUEST_BODY="This is an automated pull request to update the container collection ${BRANCH}"
+                PULL_REQUEST_BODY="- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update"
             fi
             echo "Pull request body is ${PULL_REQUEST_BODY}"
 
